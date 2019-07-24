@@ -5,23 +5,23 @@
 ## 2.界面
 ![](https://github.com/hanAndHan/SeriaHelp/blob/master/img/%E7%95%8C%E9%9D%A2.png)
 ## 3.函数说明
-Header:	#include "seriahelp.h"
-Inherits:	QMainWindow
-Properties
-QSerialPort *serial;//串口对象
-QList<QSerialPortInfo> infos;//保存串口信息
-QByteArray r_date;//接收缓存
-QByteArray s_date;//发送缓存
-int m_timerId;//延长串口读取缓存的时间
-int m_timerId_S;//显示发送时间
-int m_timerId_R;//显示接收时间
-int m_timerId_Reply;//重复发送
-int delay;//延迟接收
-unsigned int sendCount;//发送数据次数
-unsigned int recieveCount;//收到数据次数
-qint64 sendBytes;//发送字节数
-qint64 recieveBytes;//收到字节数
-QString timeText;//保存系统时间
+Header:	#include "seriahelp.h"</br>
+Inherits:	QMainWindow</br>
+Properties</br>
+QSerialPort *serial;//串口对象</br>
+QList<QSerialPortInfo> infos;//保存串口信息</br>
+QByteArray r_date;//接收缓存</br>
+QByteArray s_date;//发送缓存</br>
+int m_timerId;//延长串口读取缓存的时间</br>
+int m_timerId_S;//显示发送时间</br>
+int m_timerId_R;//显示接收时间</br>
+int m_timerId_Reply;//重复发送</br>
+int delay;//延迟接收</br>
+unsigned int sendCount;//发送数据次数</br>
+unsigned int recieveCount;//收到数据次数</br>
+qint64 sendBytes;//发送字节数</br>
+qint64 recieveBytes;//收到字节数</br>
+QString timeText;//保存系统时间</br>
 
 Public Functions
 virtual void timerEvent(QTimerEvent *event);//定时器
