@@ -1,0 +1,26 @@
+﻿生成启动时间为 2017/8/7 20:18:22。
+     1>项目“F:\Qtproject\SeriaHelp\SeriaHelp\SeriaHelp.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Release\SeriaHelp.unsuccessfulbuild”执行 Touch 任务。
+       CustomBuild:
+         所有输出均为最新。
+       ClCompile:
+         所有输出均为最新。
+         D:\vs2010\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\qt5.5.1\5.5\msvc2010\include /I.\GeneratedFiles\Release /ID:\qt5.5.1\5.5\msvc2010\include\QtCore /ID:\qt5.5.1\5.5\msvc2010\include\QtGui /ID:\qt5.5.1\5.5\msvc2010\include\QtWidgets /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt seriahelp.cpp
+         seriahelp.cpp
+       Link:
+         D:\vs2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Qtproject\SeriaHelp\Win32\Release\\SeriaHelp.exe" /NOLOGO /LIBPATH:D:\qt5.5.1\5.5\msvc2010\lib qtmain.lib Qt5Core.lib Qt5Gui.lib Qt5Widgets.lib Qt5SerialPort.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\SeriaHelp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"F:\Qtproject\SeriaHelp\Win32\Release\SeriaHelp.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Qtproject\SeriaHelp\Win32\Release\SeriaHelp.lib" /MACHINE:X86 Release\qrc_seriahelp.obj
+         Release\moc_seriahelp.obj
+         Release\main.obj
+         Release\seriahelp.obj
+         SeriaHelp.vcxproj -> F:\Qtproject\SeriaHelp\Win32\Release\SeriaHelp.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\Qtproject\SeriaHelp\Win32\Release\\SeriaHelp.exe;#1" /manifest Release\SeriaHelp.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\SeriaHelp.unsuccessfulbuild”。
+         正在对“Release\SeriaHelp.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\Qtproject\SeriaHelp\SeriaHelp\SeriaHelp.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.77
