@@ -4,7 +4,7 @@
 ![](https://github.com/hanAndHan/SeriaHelp/blob/master/img/%E6%A1%86%E6%9E%B6.png)
 ## 2.界面
 ![](https://github.com/hanAndHan/SeriaHelp/blob/master/img/%E7%95%8C%E9%9D%A2.png)
-## 3.函数说明
+## 3.代码构成
 Header:	#include "seriahelp.h"</br>
 Inherits:	QMainWindow</br>
 Properties</br>
@@ -23,39 +23,38 @@ qint64 sendBytes;//发送字节数</br>
 qint64 recieveBytes;//收到字节数</br>
 QString timeText;//保存系统时间</br>
 
-Public Functions
-virtual void timerEvent(QTimerEvent *event);//定时器
+Public Functions</br>
+virtual void timerEvent(QTimerEvent *event);//定时器</br>
 
+Private Functions</br>
+void getSerialInfos();//获取可用串口</br>
+QByteArray QString2Hex(const QString& str);//字符串转为16进制编码</br>
+char ConvertHexChar(const char& ch);//字符转为16进制</br>
+QString &addPlainForH(QString &str);//给十六进制(收/发)数据每个字节间添加空白</br>
+QString &addPlainForA(QString &str);//给ASCII(收/发)数据每个字节间添加空白</br>
+void showSendForA();//显示以ASCII码发送的数据</br>
+void showSendForH();//显示以十六进制发送的数据</br>
+void showRecieveForA();//以ASCII码显示收到的数据</br>
+void showRecieveForH();//以十六进制显示收到的数据</br>
+void showTimeForSend();//显示发送时间</br>
+void showTimeForRecieve();//显示接收时间</br>
+void showSendBytes(const qint64& m_sendBytes);//显示发送字节数</br>
+void showRecieveBytesForA(const QByteArray& r_date);//显示接收字节数</br>
+void showRecieveBytesForH(const QByteArray& r_date);//显示接收字节数</br>
+void showSendCount();//显示发送次数</br>
+void showRecieveCount();//显示接收次数</br>
 
-Private Functions
-void getSerialInfos();//获取可用串口
-QByteArray QString2Hex(const QString& str);//字符串转为16进制编码
-char ConvertHexChar(const char& ch);//字符转为16进制
-QString &addPlainForH(QString &str);//给十六进制(收/发)数据每个字节间添加空白
-QString &addPlainForA(QString &str);//给ASCII(收/发)数据每个字节间添加空白
-void showSendForA();//显示以ASCII码发送的数据
-void showSendForH();//显示以十六进制发送的数据
-void showRecieveForA();//以ASCII码显示收到的数据
-void showRecieveForH();//以十六进制显示收到的数据
-void showTimeForSend();//显示发送时间
-void showTimeForRecieve();//显示接收时间
-void showSendBytes(const qint64& m_sendBytes);//显示发送字节数
-void showRecieveBytesForA(const QByteArray& r_date);//显示接收字节数
-void showRecieveBytesForH(const QByteArray& r_date);//显示接收字节数
-void showSendCount();//显示发送次数
-void showRecieveCount();//显示接收次数
-
-Private Slots
-void setSerialParameter(bool checked);//设置串口参数
-void refreshSerialInfos();//刷新可用串口
-void readSerial();//从缓存区读取数据
-void writeSerial();//把数据发送到缓存区
-void enterFormatSet(bool checked);//限制输入文本框格式
-void startOrEndReplySend(bool checked);//启动或终止重复发送
-void getCurrentDelay(int value);//获取当前接收延迟时间大小
-void resetCurrentDelay(bool checked);//重置当前接收延迟时间大小
-void clean();//清除数据
-void chooseShowSendCount(bool checked);//不显示or显示发送次数
-void chooseShowRecieveCount(bool checked);//不显示or显示接收次数
-void onSave();//保存文件
-void onOpen();//打开文件
+Private Slots</br>
+void setSerialParameter(bool checked);//设置串口参数</br>
+void refreshSerialInfos();//刷新可用串口</br>
+void readSerial();//从缓存区读取数据</br>
+void writeSerial();//把数据发送到缓存区</br>
+void enterFormatSet(bool checked);//限制输入文本框格式</br>
+void startOrEndReplySend(bool checked);//启动或终止重复发送</br>
+void getCurrentDelay(int value);//获取当前接收延迟时间大小</br>
+void resetCurrentDelay(bool checked);//重置当前接收延迟时间大小</br>
+void clean();//清除数据</br>
+void chooseShowSendCount(bool checked);//不显示or显示发送次数</br>
+void chooseShowRecieveCount(bool checked);//不显示or显示接收次数</br>
+void onSave();//保存文件</br>
+void onOpen();//打开文件</br>
